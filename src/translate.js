@@ -5,7 +5,7 @@ const translator = require('@vitalets/google-translate-api')
 
 /**
  * 
- * @param {String} string String to trnslate.
+ * @param {String} string String to translate.
  * @param {String} language Language to translate to.
  * @param {Boolean} cachingOptions Translation caching options.
  * @returns {String}
