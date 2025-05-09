@@ -1,11 +1,11 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
-const translator = require("@kreisler/js-google-translate-free");
+const translator = require('@vitalets/google-translate-api')
 
 /**
  * 
- * @param {String} string String to translate.
+ * @param {String} string String to trnslate.
  * @param {String} language Language to translate to.
  * @param {Boolean} cachingOptions Translation caching options.
  * @returns {String}
@@ -30,7 +30,7 @@ module.exports = async function translate(string, language, cachingOptions) {
     if (language === "zh") language = "zh-CN";
     if (language === "zhcn" || language === "zh-cn") language = "zh-CN";
     if (language === "zhtw" || language === "zh-tw") language = "zh-TW";
-    let translation = await translator.translate({ from: "en", to: language, text: string }).catch(e => console.log(e)); //translate the string using google translate
+    let translation = await translator.translate(string, { from: "en", to: language }).then(res => res.text); //translate the string using google translate
     if (!translation) return console.log("Discord.js Akinator Translator: Error occured while translating.");
 
     //save the translation to the cache if caching is enabled

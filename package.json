@@ -1,6 +1,6 @@
 {
   "name": "discord.js-akinator",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "A Discord.js v14 module that allows you to create an Akinator command for your discord bot in a matter of seconds.",
   "main": "src/index.js",
   "funding": {
@@ -22,7 +22,7 @@
   "author": "WillTDA",
   "license": "Apache-2.0",
   "dependencies": {
-    "@kreisler/js-google-translate-free": "^4.0.2",
-    "aki-api": "^7.0.0"
+    "@vitalets/google-translate-api": "^9.2.1",
+    "aki-api": "^7.0.1"
   }
 }
